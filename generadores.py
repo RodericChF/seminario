@@ -28,17 +28,20 @@ def take_while (cond, it:Iterable):
             yield elem
 
 if __name__=='__main__':
-    print('--------PRIMER APARTADO--------''\n')
+    print('--------PRIMER APARTADO--------')
+    print('Los primeros 100 cuadrados perfectos')
     sq = squares()
     for i in range(100):
         print(next(sq))
 
-    print('\n''--------SEGUNDO APARTADO-------''\n')
+    print('\n''--------SEGUNDO APARTADO-------')
+    print('Los cuadrados perfectos menores que 100')
 
     for sqm100 in take_while(lambda n:n<100, squares()):
         print(sqm100)
 
-    print('\n''--------TERCER APARTADO--------''\n')
+    print('\n''--------TERCER APARTADO--------')
+    print('Los primeros 20 cuadrados perfectos capicúa\n')
 
     def capicua (n:int):
         nString=str(n)
